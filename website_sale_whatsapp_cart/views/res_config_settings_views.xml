@@ -1,0 +1,25 @@
+<odoo>
+    <record id="res_config_settings_view_form_whatsapp_cart" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.whatsapp.cart</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='website_mail_channel_id']" position="after">
+                <setting
+                    id="whatsapp_sales_phone_setting"
+                    string="WhatsApp para carrito"
+                    help="Número fijo de ventas para recibir los carritos enviados desde eCommerce."
+                >
+                    <field
+                        name="whatsapp_sales_phone"
+                        placeholder="+51999999999"
+                        class="oe_inline"
+                    />
+                    <div class="text-muted">
+                        Formato permitido: +51XXXXXXXXX o 51XXXXXXXXX. Se normaliza automáticamente a dígitos para wa.me.
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
