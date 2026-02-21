@@ -1,0 +1,33 @@
+<odoo>
+    <template id="cart_whatsapp_button" inherit_id="website_sale.cart" name="Cart WhatsApp button">
+        <xpath expr="//div[contains(@class, 'o_wsale_cart_buttons')]" position="inside">
+            <t t-set="website_order" t-value="website_sale_order"/>
+            <t t-if="website_order and website_order.order_line">
+                <t t-if="website_order._whatsapp_phone_configured()">
+                    <a
+                        class="btn btn-success mt-2 w-100"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        t-att-href="website_order._get_whatsapp_wa_link()"
+                    >
+                        <i class="fa fa-whatsapp me-1"/>
+                        Enviar carrito por WhatsApp
+                    </a>
+                </t>
+                <t t-else="">
+                    <button
+                        type="button"
+                        class="btn btn-outline-secondary mt-2 w-100 o_cart_whatsapp_missing_config"
+                        data-whatsapp-warning="Configure el número de WhatsApp en Ajustes"
+                    >
+                        <i class="fa fa-whatsapp me-1"/>
+                        Enviar carrito por WhatsApp
+                    </button>
+                </t>
+            </t>
+            <t t-else="">
+                <div class="alert alert-info mt-2 mb-0" role="alert">Carrito vacío.</div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
