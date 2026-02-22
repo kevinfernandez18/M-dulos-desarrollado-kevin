@@ -1,0 +1,31 @@
+.ed-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ed-bar-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 130px;
+    gap: 8px;
+    align-items: center;
+}
+
+.ed-bar {
+    width: 100%;
+    background: #f1f3f5;
+    border-radius: 4px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.ed-bar span {
+    display: block;
+    background: #3b82f6;
+    height: 100%;
+}
+
+.ed-label,
+.ed-value {
+    font-size: 12px;
+}

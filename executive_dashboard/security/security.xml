@@ -1,0 +1,6 @@
+<odoo>
+    <record id="group_ceo" model="res.groups">
+        <field name="name">CEO Dashboard</field>
+        <field name="category_id" ref="base.module_category_accounting_accounting"/>
+    </record>
+</odoo>
