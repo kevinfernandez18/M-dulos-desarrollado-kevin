@@ -1,0 +1,17 @@
+{
+  "name": "Blusa Base Demo",
+  "garment": "Blusa",
+  "size": "M",
+  "calibration_cm_per_pixel": 0.05,
+  "points": [
+    {"x": 100, "y": 120},
+    {"x": 260, "y": 120},
+    {"x": 280, "y": 340},
+    {"x": 100, "y": 340}
+  ],
+  "paths": [[0, 1, 2, 3, 0]],
+  "annotations": [
+    {"type": "text", "text": "Frente Blusa", "x": 130, "y": 90},
+    {"type": "notch", "text": "Piquete hombro", "x": 200, "y": 120}
+  ]
+}

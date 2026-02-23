@@ -1,0 +1,17 @@
+{
+  "name": "Vestido Base Demo",
+  "garment": "Vestido",
+  "size": "L",
+  "calibration_cm_per_pixel": 0.05,
+  "points": [
+    {"x": 120, "y": 90},
+    {"x": 300, "y": 90},
+    {"x": 320, "y": 520},
+    {"x": 120, "y": 520}
+  ],
+  "paths": [[0, 1, 2, 3, 0]],
+  "annotations": [
+    {"type": "text", "text": "Cuerpo Vestido", "x": 145, "y": 70},
+    {"type": "notch", "text": "Piquete cintura", "x": 220, "y": 280}
+  ]
+}
